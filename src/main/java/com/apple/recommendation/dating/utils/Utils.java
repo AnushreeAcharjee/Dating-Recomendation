@@ -68,7 +68,7 @@ public class Utils {
 
     public User getUser(String given) {
         for(User user : users){
-            if(user.equals(given)){
+            if(user.getName().equalsIgnoreCase(given)){
                 return user;
             }
         }
