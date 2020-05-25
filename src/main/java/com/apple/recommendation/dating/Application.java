@@ -21,7 +21,7 @@ public class Application {
             datingManager.registerUser(user);
         }
 
-        List<String> recommendations = datingManager.fetchMatches(utils.getUser("UserB"), 2);
+        List<String> recommendations = datingManager.getRecommendations(utils.getUser("UserB"), 2);
         System.out.println(recommendations);
     }
 

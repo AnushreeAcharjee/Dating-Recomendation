@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface DatingManager {
     void registerUser(User user);
-    List<String> fetchMatches(User user, int topMostCnt);
+    List<String> getRecommendations(User user, int topMostCnt);
 }

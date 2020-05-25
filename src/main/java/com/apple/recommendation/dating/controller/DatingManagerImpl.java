@@ -7,19 +7,18 @@ import com.apple.recommendation.dating.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PriorityQueue;
 
 /**
  * Created by anushree on 23 May, 2020
  */
 public class DatingManagerImpl implements DatingManager {
-    PriorityQueue<User> pq = new PriorityQueue<>();
+
     List<User> list = new ArrayList<>();
     public void registerUser(User user) {
         list.add(user);
     }
 
-    public List<String> fetchMatches(User user, int topMostCnt) {
+    public List<String> getRecommendations(User user, int topMostCnt) {
         List<Filter> filters = new ArrayList<>();
         //IMPORTANT : Mind the order
         filters.add(new GenderFilter());
